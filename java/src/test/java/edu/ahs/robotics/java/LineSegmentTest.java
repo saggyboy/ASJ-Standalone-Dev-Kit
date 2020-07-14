@@ -21,11 +21,20 @@ public class LineSegmentTest {
         //pointsActual is the point array that is returned
         Point[] pointsActual = lineSegment.subDivide(3);
 
-        //Loop over both point arrays and compare the x and y values
+        //Loop over both point arrays and compare the points
         for (int i = 0; i < pointsActual.length; i++) {
-            assertEquals(pointsExpected[i].x, pointsActual[i].x, 0.000001);
-            assertEquals(pointsExpected[i].y, pointsActual[i].y, 0.000001);
-
+            assertEquals(pointsExpected[i], pointsActual[i]);
         }
+    }
+
+    @Test
+    public void interpolate() {
+        Point point1 = new Point(1,0);
+        Point point2 = new Point(5,0);
+
+        LineSegment lineSegment = new LineSegment(point1, point2);
+        Point interpolatedPoint = lineSegment.interpolate(3);
+
+        assertEquals(new Point(4,0), interpolatedPoint);
     }
 }

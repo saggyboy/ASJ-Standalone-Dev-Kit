@@ -32,4 +32,22 @@ public class LineSegment {
         }
         return subDividedPoints;
     }
+
+    public Point interpolate(double distanceFromFirstPoint){
+        //Find proportion of the distanceFromFirstPoint to distance of line segment
+        double segmentLength = point1.distanceToPoint(point2);
+        double proportion = distanceFromFirstPoint/segmentLength;
+
+        //Find deltas of line segment
+        double deltaX = point2.x - point1.x;
+        double deltaY = point2.y - point1.y;
+
+        //Multiply deltas by proportion
+        double interpolatedX = deltaX * proportion;
+        double interpolatedY = deltaY * proportion;
+
+        //Create new point given interpolated x and y values
+        return new Point(interpolatedX + point1.x, interpolatedY + point1.y);
+    }
+
 }
