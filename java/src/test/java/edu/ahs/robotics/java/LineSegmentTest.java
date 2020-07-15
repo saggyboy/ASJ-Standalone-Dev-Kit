@@ -29,6 +29,7 @@ public class LineSegmentTest {
 
     @Test
     public void interpolate() {
+        //Test in a straight line
         Point point1 = new Point(1,0);
         Point point2 = new Point(5,0);
 
@@ -36,5 +37,23 @@ public class LineSegmentTest {
         Point interpolatedPoint = lineSegment.interpolate(3);
 
         assertEquals(new Point(4,0), interpolatedPoint);
+
+        //Test with negative distance from first point
+        point1 = new Point(1,0);
+        point2 = new Point(5,0);
+
+        lineSegment = new LineSegment(point1, point2);
+        interpolatedPoint = lineSegment.interpolate(-1);
+
+        assertEquals(new Point(0,0), interpolatedPoint);
+
+        //Test on a diagonal line
+        point1 = new Point(1,1);
+        point2 = new Point(3,5);
+
+        lineSegment = new LineSegment(point1, point2);
+        interpolatedPoint = lineSegment.interpolate(3);
+
+        assertEquals(new Point(2.341640786499874,3.6832815729997477), interpolatedPoint);
     }
 }
