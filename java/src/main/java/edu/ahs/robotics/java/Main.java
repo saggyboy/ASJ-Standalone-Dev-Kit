@@ -1,6 +1,7 @@
 package edu.ahs.robotics.java;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,5 +31,6 @@ public class Main {
 
         //Print the distance from origin of point a
         System.out.println(a.distanceFromOrigin());
+
     }
 }
