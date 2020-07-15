@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class LineSegmentTest {
 
     @Test
-    public void subDivide() {
+    public void testSubDivide() {
         //Creates a point array named pointsExpected of size 2 and adds 2 new points
         Point[] pointsExpected = new Point[2];
         pointsExpected[0] = new Point(1, 1);
@@ -28,7 +28,7 @@ public class LineSegmentTest {
     }
 
     @Test
-    public void interpolate() {
+    public void testInterpolate() {
         //Test in a straight line
         Point point1 = new Point(1,0);
         Point point2 = new Point(5,0);

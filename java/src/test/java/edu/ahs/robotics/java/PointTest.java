@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class PointTest {
 
     @Test
-    public void distanceFromOrigin() {
+    public void testDistanceFromOrigin() {
         //1st Quadrant
         assertEquals(5, new Point(3,4).distanceFromOrigin(),.00001);
         //4th Quadrant
@@ -20,7 +20,7 @@ public class PointTest {
     }
 
     @Test
-    public void getQuadrant() {
+    public void testGetQuadrant() {
         //Tests for points in the quadrants
         assertEquals("Quadrant 1",new Point(3,4).getQuadrant());
         assertEquals("Quadrant 2",new Point(-4.5,6).getQuadrant());
@@ -35,7 +35,7 @@ public class PointTest {
     }
 
     @Test
-    public void distanceToPoint() {
+    public void testDistanceToPoint() {
         //Test in a straight line
         Point point1 = new Point(1,0);
         Point point2 = new Point(3,0);
@@ -56,7 +56,7 @@ public class PointTest {
     }
 
     @Test
-    public void closestPoint() {
+    public void testClosestPoint() {
         //Create the point we will be finding the closest point to
         Point point1 = new Point(2,4);
 

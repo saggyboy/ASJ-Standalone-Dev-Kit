@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 public class ListExercisesTest {
 
     @Test
-    public void printStrings() {
+    public void testPrintStrings() {
         ArrayList<String> strings = new ArrayList();
         strings.add("are ");
         strings.add("you ");
@@ -26,7 +26,7 @@ public class ListExercisesTest {
     }
 
     @Test
-    public void printStringsInReverse() {
+    public void testPrintStringsInReverse() {
         ArrayList<String> strings = new ArrayList();
         strings.add("are");
         strings.add("you ");
@@ -40,7 +40,7 @@ public class ListExercisesTest {
     }
 
     @Test
-    public void isStringInList() {
+    public void testIsStringInList() {
         ArrayList<String> strings = new ArrayList();
         strings.add("Hello");
         strings.add("Mine");
@@ -58,7 +58,7 @@ public class ListExercisesTest {
     }
 
     @Test
-    public void findLargestNumber() {
+    public void testFindLargestNumber() {
         ArrayList<Integer> integers = new ArrayList();
         integers.add(-1);
         integers.add(-4);
@@ -83,7 +83,7 @@ public class ListExercisesTest {
     }
 
     @Test
-    public void getIntegerListLessThanTarget() {
+    public void testGetIntegerListLessThanTarget() {
         ArrayList<Integer> integers = new ArrayList();
         integers.add(-1);
         integers.add(-4);
@@ -103,7 +103,7 @@ public class ListExercisesTest {
     }
 
     @Test
-    public void putInOrder() {
+    public void testPutInOrder() {
         ArrayList<Integer> integers = new ArrayList();
         integers.add(-1);
         integers.add(-4);
